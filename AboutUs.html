@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container1 {
+            height: 750px;
+        }
+
+        .navbar {
+            position: re;
+            display: flex;
+            background-color: transparent;
+            top: 0;
+            height: 100px;
+            z-index: 1000000000000;
+
+        }
+
+        nav {
+            background-color: transparent;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            height: 70px;
+            position: relative;
+            top: -751px;
+
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            position: relative;
+            left: 480px;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            margin: 20px;
+            font-size: 25px;
+
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav a:hover {
+            color: #000000;
+            text-decoration: underline;
+
+        }
+
+        .logo img {
+            height: 120px;
+            width: auto;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #a4133c;
+            min-width: 120px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+
+        }
+
+        .dropdown-content a {
+            padding: 10px;
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            columns: red;
+            text-decoration: underline;
+        }
+
+
+
+        .imggg2 {
+            position: relative;
+            top: -750px;
+            left: 88px;
+        }
+
+
+        /* rewiew start */
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .review {
+
+            background-color: #9d8189;
+            height: 670px;
+        }
+
+        .review-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .rev-img {
+            width: 70px;
+            height: 70px;
+        }
+
+        .rev-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            border: 2px solid var(--second-color);
+        }
+
+        .review-container .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            background-color: #f4acb7;
+        }
+
+        .review-container .box h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0.5rem 0 0.5rem;
+        }
+
+        .review-container .box p {
+            font-style: italic;
+        }
+
+        .review-container .box .stars {
+            color: var(--main-color);
+        }
+
+        /* review ends */
+        .container2{
+            background-color: #9d8189;
+            font-size: 22px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container1">
+        <img class="imggg1" src="Images/1.png" alt="" height="750">
+
+
+
+        <header>
+            <div class="navbar">
+                <nav>
+                    <div class="logo">
+                        <a href="index.html"><img src="Images/logo.png" alt="Logo" height="120px"></a>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Product</a>
+                            <div class="dropdown-content">
+                                <a href="retail.html">Retail</a>
+                                <a href="wholesale.html">Wholesale</a>
+                            </div>
+                        </li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="loginPage.html">Login</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+
+
+        <img class="imggg2" src="Images/Apple-1Blogs-1.png" alt="" height="600px">
+    </div>
+
+    <!-- Review -->
+    <section class="review" id="review">
+        <div class="heading">
+            <h1>What's Our Customer Say !!</h1>
+        </div>
+        <div class="review-container">
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1hbGV8ZW58MHx8MHx8fDA%3D"
+                        alt="custormer1">
+                </div>
+                <h2>Heet Patel</h2>
+                <div class="stars">
+                    4.9<i>&#9733</i>
+                </div>
+                <p>This Apple Besan Food Product is a game-changer! It's nutritious, tasty, and incredibly satisfying. I
+                    can't get enough of it
+                </p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"
+                        alt="custormer2">
+                </div>
+                <h2>R Bhatt</h2>
+                <div class="stars">
+                    4.8<i>&#9733</i>
+                </div>
+                <p>Finally, a healthy snack that actually tastes amazing! The hint of apple paired with the wholesome
+                    goodness of besan makes for a winning combination.</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://img.freepik.com/free-photo/elder-man-thinking-staring-intensively_23-2148036813.jpg?size=626&ext=jpg&ga=GA1.1.1979727886.1713473056&semt=ais"
+                        alt="custormer3">
+                </div>
+                <h2>Pratik Patil</h2>
+                <div class="stars">
+                    5.0<i>&#9733</i>
+                </div>
+                <p>My whole family can't get enough of this Apple Besan Food Product. It's a hit with kids and adults
+                    alike, making it the perfect snack for any occasion!</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://img.freepik.com/free-photo/smiley-man-holding-camera-front-view_23-2149915895.jpg"
+                        alt="custormer4">
+                </div>
+                <h2>Parth Joshi</h2>
+                <div class="stars">
+                    4.8<i>&#9733</i>
+                </div>
+                <p>Convenient and efficient! The app interface is user-friendly, the ride was comfortable, and the
+                    driver was polite and knowledgeable.</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="custormer5">
+                </div>
+                <h2>Nirav Modi</h2>
+                <div class="stars">
+                    4.8<i>&#9733</i>
+
+                </div>
+                <p>YartaVahanSewa's car rental service exceeded my expectations with a wide range of options and a
+                    clean, fuel-efficient vehicle.</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="custormer6">
+                </div>
+                <h2>Pawan Sersiya</h2>
+                <div class="stars">
+                    4.9<i>&#9733</i>
+                </div>
+                <p>Highly recommend YartaVahanSewa for seamless booking, excellent customer service, and competitive
+                    rates.</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://www.shutterstock.com/image-photo/profile-picture-smiling-successful-young-260nw-2040223583.jpg"
+                        alt="custormer7">
+                </div>
+                <h2>Naitik Rathod</h2>
+                <div class="stars">
+                    4.9<i>&#9733</i>
+                </div>
+                <p>Reliable, efficient, and cost-effective! YartaVahanSewa's service delivers clean, well-maintained
+                    vehicles right on time.</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="https://images.pexels.com/photos/227294/pexels-photo-227294.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="custormer8">
+                </div>
+                <h2>Kavin Hirapara</h2>
+                <div class="stars">
+                    5<i>&#9733</i>
+                </div>
+                <p>Five-star experience! Smooth sailing from booking to drop-off, with a comfortable, spacious car and
+                    affordable rates.</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div class="container2">
+        <div class="about-txt">
+            <p><b>Why Apple Foods ?</b><br> With the aim to spread happiness through taste, we are always looking for
+                talent to help us reach our goal.
+
+                Perks of working with us:
+
+                Growth opportunities pro max
+
+                No hierarchy, it’s all about harmony
+
+                Mondays feel like Fridays here
+
+                PS: Tons of events with food! <br><br>
+
+                Our flours are manufactured at three state-of-the-art facilities in Rajkot, Chhatral and Junagadh. These
+                three factories are strategically located to cater quickly to the demands from different regions of
+                Gujarat and beyond. These facilities boast of advanced infrastructure and imported machinery for food
+                processing, filtering and quality checking. We upgrade the infrastructure from time to time in order to
+                take advantage of the latest advances in processing technology. We keep ourselves ahead of the curve so
+                that we can scale up and deliver in bulk at a relatively short notice. Our stringent quality-checking
+                parameters ascertain that only top-quality food products get dispatched from our facility so our end
+                customers and institutional clients can experience the joy of good food. <br><br>
+
+                <b>Venu Group...</b> <br>Our company has been associated with the food industry since 1997 through Gulab
+                Besan. Venu Group was established in 2006 at Chhatral, a renowned industrial town in Gujarat, India,
+                with the objective of making people happy through good food. Now we are a leading manufacturer and
+                supplier of premium quality Besan, Maida, Atta, Rawa and Suji under our flagship brand, Apple.Apple
+                Foods is synonymous in the market with purity, rich taste, high nutritional value, freshness and longer
+                shelf-life.
+            </p>
+        </div>
+        
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

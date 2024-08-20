@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-color: #859F7C;
+        height: 700px;
+        position: relative;
+    }
+
+    .image {
+        position: absolute;
+        top: 100px;
+        left: 125px;
+        transition: 0.5s;
+    }
+
+    .image:hover {
+        transform: translateY(-10px);
+        transform: scale(1.1);
+    }
+
+    #heading {
+        position: absolute;
+        font-size: 40px;
+        top: 100px;
+        left: 650px;
+
+    }
+
+    #line {
+        position: absolute;
+        font-size: 40px;
+        top: 130px;
+        left: 650px;
+
+    }
+
+    #real-price {
+        position: absolute;
+        font-size: 60px;
+        color: rgb(0, 61, 0);
+        font-weight: 800;
+        top: 220px;
+        left: 650px;
+
+    }
+
+    #price1 {
+        position: absolute;
+        font-size: 30px;
+        top: 207px;
+        left: 815px;
+
+    }
+
+    #rating {
+        position: absolute;
+        font-size: 24px;
+        top: 267px;
+        left: 650px;
+
+    }
+
+    #description {
+        position: absolute;
+        font-size: 26px;
+        top: 310px;
+        left: 650px;
+
+    }
+
+    #special {
+        position: absolute;
+        font-size: 26px;
+        top: 420px;
+        left: 650px;
+
+    }
+
+    #quantity {
+        position: absolute;
+        font-size: 26px;
+        top: 460px;
+        left: 650px;
+
+    }
+
+    #leg {
+        position: absolute;
+        font-size: 24px;
+        top: 505px;
+        left: 656px;
+
+    }
+
+    .buynow button {
+        position: absolute;
+        top: 575px;
+        left: 878px;
+        padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: blueviolet;
+    }
+
+    .buynow button:hover{
+        background-color: rgb(17, 223, 51);
+    }
+    .addcart button {
+        position: absolute;
+        top: 576px;
+        left: 645px;
+        padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 24px;
+        border-radius: 5px;
+        background-color: blueviolet;
+    }
+    .addcart button:hover{
+        background-color: rgb(255, 255, 255);
+    }
+    .heading2 {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        font-size: 45px;
+        font-weight: 800;
+        color: whitesmoke;
+    }
+
+
+    /* --------------------------------------------------------- */
+
+    .related-products {
+        position: relative;
+        top: 200px;
+    }
+
+    .container2 {
+        background-color: #040c47;
+        position: relative;
+        top: 700px;
+        height: 750px;
+    }
+
+    body {
+        .product-container {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    .heading {
+        font-family: "Original Surfer", sans-serif;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .product-card {
+            text-align: center;
+            background-color: rgb(253, 255, 182);
+            margin: 10px;
+            padding: 10px;
+            height: 400px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 5px 10px 8px #1a1919;
+            transition: 0.5s;
+        }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .product-card h2 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    #price {
+        color: rgb(0, 151, 0);
+
+    }
+
+    .product-card p {
+        margin-top: 5px;
+    }
+
+    .product-container2 {
+        display: flex;
+        justify-content: space-around;
+    }
+    /* FOOTER STARTS */
+
+    .container5 {
+        height: 950px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Oswald", sans-serif;
+        /* ------------------ */
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        min-height: 100vh;
+        background-color: black;
+    }
+
+    /* body {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 100vh;
+            background-color: black;
+        } */
+
+    footer {
+        position: relative;
+        width: 100%;
+        background: #3586ff;
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .social_icon,
+    .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    .social_icon li,
+    .menu li {
+        list-style: none;
+    }
+
+    .social_icon li a {
+        font-size: 2em;
+        color: white;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+    }
+
+    .social_icon li a:hover {
+        transform: translateY(-10px);
+        color: black;
+    }
+
+    footer .menu li a {
+        font-size: 1.2em;
+        color: white;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+    }
+
+    footer .menu li a:hover {
+        opacity: 1;
+        color: black;
+    }
+
+    footer p {
+        color: white;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+
+    footer .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url(wave.png);
+        background-size: 1000px 100px;
+    }
+
+    footer .wave#wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWave 4s linear infinite;
+    }
+
+    footer .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animateWave_02 4s linear infinite;
+    }
+
+    @keyframes animateWave {
+        0% {
+            background-position-x: 1000px;
+        }
+
+        100% {
+            background-position-x: 0px;
+        }
+    }
+
+    @keyframes animateWave_02 {
+        0% {
+            background-position-x: 0px;
+        }
+
+        100% {
+            background-position-x: 1000px;
+        }
+    }
+
+    footer .wave#wave3 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWave_03 4s linear infinite;
+    }
+
+    footer .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 10px;
+        animation: animateWave_04 4s linear infinite;
+    }
+
+    @keyframes animateWave_03 {
+        0% {
+            background-position-x: 1000px;
+        }
+
+        100% {
+            background-position-x: 0px;
+        }
+    }
+
+    @keyframes animateWave_04 {
+        0% {
+            background-position-x: 0px;
+        }
+
+        100% {
+            background-position-x: 1000px;
+        }
+    }
+
+    /* FOOTER ENDS */
+</style>
+
+<body>
+    <!-- E18506 -->
+    <div class="container">
+        <div class="product">
+            <div class="image">
+                <img src=https://applefoods.co.in/wp-content/uploads/2023/10/Kathiyawadi-Besan.jpg alt="" height="500px">
+            </div>
+            <p id="heading">Apple Kathiyawadi Besan</p>
+            <p id="line">-------------------------</p>
+            <p id="price1">₹̶ ̶8̶5̶ </p>
+            <span id="real-price"> ₹ 50</span>
+            <p id="rating">Best Selling ★★★★★ (49,877)</p>
+            <p id="description">❀Let the bigger pack of Apple Kathiyawadi Besan take your palate on the blissful joyride of Kathiyawadi taste. This product is made from quality gram flour.</p>
+            <p id="special">❀Ideal For: Khaman• Ganthiya• Fafda</p>
+            <p id="quantity">❀ SKUs: 200 g, 500 g, 1 kg</p>
+            <p id="leg">• Made from high-quality chana dal</p>
+            <div class="addcart">
+                <button>Add to Cart</button>
+            </div>
+            <div class="buynow">
+                <button>Buy Now</button>
+            </div>
+        </div>
+        <div class="related">
+
+            <!-- <div class="heading2">
+                <p>You might be interested in...</p>
+            </div>
+
+            <div class="related-products">
+                <div class="product-container">
+                    <div class="product-card">
+                        <a href="#"><img src="diman besan.png" alt="Product image"></a>
+                        <h2>Diamond Besan</h2>
+                        <p>₹̶ ̶1̶5̶0̶ <span id="price"> ₹ 𝟭𝟭𝟵 </span></p>
+                        <p>Best Selling ★★★★★ (49,877)</p>
+                    </div>
+                    <div class="product-card">
+                        <a href="#"><img src="FARSAN_KING_BESAN_PACK_20KG.jpg" alt="Product image"></a>
+                        <h2>Farsan King</h2>
+                        <p>₹̶ ̶1̶4̶5̶ <span id="price"> ₹ 𝟭𝟰𝟱</span></p>
+                        <p>Best Selling ★★★★★ (47,677)</p>
+                    </div>
+                    <div class="product-card">
+                        <a href="#"><img src="kathyavadi besan.png" alt="Product image"></a>
+                        <h2>Kathiyawadi Besan</h2>
+                        <p>₹̶ ̶8̶5̶<span id="price">₹ 𝟰𝟮 </span></p>
+                        <p>Best Selling ★★★★★ (47,677)</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="container2">
+            <div class="heading2">
+                <p>You might be interested in...</p>
+            </div>
+
+            <div class="related-products">
+
+                <div class="product-container">
+                    <div class="product-card">
+                        <a href="applebesan-retail.html"><img src="Images/Apple-Besan1.jpg" alt="Product image"></a>
+                        <h2>Apple Besan</h2>
+                        <p>₹̶ ̶1̶5̶0̶ <span id="price"> ₹ 𝟭𝟭𝟵 </span></p>
+                        <p>Best Selling ★★★★★ (49,877)</p>
+                    </div>
+                    <div class="product-card">
+                        <a href="dollerbesan-retail.html"><img src="Images/doller.png" alt="Product image"></a>
+                        <h2>Doller Besan</h2>
+                        <p>₹̶ ̶1̶4̶5̶ <span id="price"> ₹ 𝟭𝟰𝟱</span></p>
+                        <p>Best Selling ★★★★★ (47,677)</p>
+                    </div>
+                    <div class="product-card">
+                        <a href="applemainda-retail.html"><img src="Images/maida.png" alt="Product image"></a>
+                        <h2>Apple Maida</h2>
+                        <p>₹̶ ̶8̶5̶<span id="price">₹ 𝟰𝟮 </span></p>
+                        <p>Best Selling ★★★★★ (47,677)</p>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER STARTS -->
+    <div class="container5">
+        <footer>
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+
+            </div>
+            <ul class="social_icon">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            </ul>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+            <p>@2024 Online Tutorials | All Right Reserved</p>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
+    <!-- FOOTER ENDS -->
+
+</body>
+
+</html>

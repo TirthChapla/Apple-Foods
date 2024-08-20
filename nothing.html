@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', monospace;
+        }
+
+        ul {
+            list-style: none;
+            text-align: right;
+        }
+
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .list {
+            background: rgb(105 163 140);
+            position: relative;
+
+        }
+
+        #list1 {
+            display: inline-block;
+
+        }
+
+        .logo {
+            display: block;
+            position: relative;
+            top: -100px;
+        }
+
+        ul li a {
+            display: block;
+            padding: 20px 25px;
+            color: #FFF;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        ul li ul.dropdown li {
+            display: block;
+        }
+
+        ul li ul.dropdown {
+            width: 100%;
+            background: #8c52ff;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+            background: #6d30e9;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <ul class="list">
+
+                <li><a href="#">Home</a></li>
+
+                <li>
+                    <a href="#">Locations ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Germany</a></li>
+                        <li><a href="#">Australia</a></li>
+                        <li><a href="#">Switzerland</a></li>
+                        <li><a href="#">Japan</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="logo">
+        <img src="logo.png" alt="logo" height="120px">
+    </div>
+</body>
+
+</html>
+
+<!-- rewrite the code. modification is fir diaplay the total amount u are placing the order. now u have different section to pay like UPI , credit /debit/atm cards , EMI , Net banking , Wallets and last Cash on delivary option. each section have click option like when we click on them it opens it payment method. first in UPI section option have google pay , paytem  and phone pay . each have pay now button. second section credit / debit / atm cards it will ask the card number , expire date and CVV of three number and also have pay now button and third have emi section it will show different banks name like HDFC bank ,Axis Bank and ICIC bank and each bank have see plans button and fourth have net banking section it will show options to choose with which bank like hdfc bank , axis bank and icic bank . each bank have pay now options. and fifth section is wallets it contain the wallets like paytem and phonepay and both have options to write our mobile no and have pay now button in each and sixth section is cash on dilivery section have option to place order button only  -->

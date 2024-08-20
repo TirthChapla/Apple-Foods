@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Foods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+        
+
+
+        .navbar {
+            position: fixed;
+            display: flex;
+            background-color: rgb(105 163 140);
+            top: 0;
+            height: 80px;
+            width: 1303px;
+            z-index: 1000;
+    
+        }
+
+        nav {
+            /* background-color: rgb(105 163 140); */
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            height: 70px;
+            
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            position: relative;
+            left: 480px;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            margin: 20px;
+            font-size: 25px;
+            
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav a:hover {
+            color: #000000;
+            text-decoration: underline;
+
+        }
+
+        .logo img {
+            height: 120px;
+            width: auto;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(0, 92, 57);
+            min-width: 120px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+
+        }
+
+        .dropdown-content a {
+            padding: 10px;
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            columns: red;
+            text-decoration: underline;
+        }
+
+        /* .logo {
+            position: relative;
+            width: 150px;
+            left: 8px;
+            top: -5px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            position: relative;
+            left: 700px;
+            top: -104px;
+
+
+        }
+
+        li {
+            font-size: 30px;
+            margin: 15px;
+            padding: 5px;
+            font-family: "Poppins", sans-serif;
+            color: rgb(255, 255, 255);
+        }
+
+
+        ul.dropdown li {
+            display: block;
+        }
+
+        ul li a:hover {
+            background-color: #75db8f;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        ul.dropdown {
+            width: 100%;
+            background-color: #75db8f;
+            position: absolute;
+            z-index: 999;
+            display: none;
+
+        }
+
+        ul a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        li:hover {
+            color: black;
+            text-decoration: underline;
+        } */
+
+        .container1 {
+            background-color: rgb(105 163 140);
+            height: 750px;
+
+
+        }
+
+        .img1 {
+            left: 150px;
+            top: 150px;
+            position: relative;
+            height: 300px;
+
+
+        }
+
+        .container2 {
+            background-color: #e6a658;
+            height: 750px;
+            position: relative;
+            z-index: 2;
+            border-top: 2px solid black;
+        }
+
+        .img2 {
+            position: absolute;
+            top: 300px;
+            left: 55px;
+        }
+
+        .img3 {
+            position: absolute;
+            top: 65px;
+            left: 350px;
+        }
+
+        .container3 {
+            background-color: #75db8f;
+            height: 750px;
+
+            position: relative;
+            z-index: 2;
+
+        }
+
+        .img4 {
+            position: absolute;
+            top: 70px;
+            margin-right: 215px;
+            /* romil bhai rabadiya */
+            display: flex;
+        }
+
+        .text {
+            /* position:absolute;
+            font-size: 28px;
+            left: 500px; */
+            position: relative;
+            top: 180px;
+            left: 85px;
+            font-size: 28px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container4 {
+            height: 670px;
+            background-color: #122c93;
+            position: relative;
+            color: whitesmoke;
+        }
+
+        .heading {
+            font-family: "Original Surfer", sans-serif;
+            position: absolute;
+            top: 50px;
+            left: 70px;
+            font-size: 32px;
+            color: rgb(255, 255, 255);
+        }
+
+        .detail {
+            position: absolute;
+            font-size: 28px;
+            padding: 30px;
+            width: 1040px;
+            top: 100px;
+            left: 40px;
+
+        }
+
+        .slider {
+            height: 250px;
+            margin: auto;
+            position: relative;
+            width: 90%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            top: 300px;
+        }
+
+        .slide-track {
+            display: flex;
+            width: calc(250px * 12);
+            /* slide track width = total no slides(6 * 2 =12) * individual slide width(250px) */
+            animation: scroll 40s linear infinite;
+        }
+
+        .slide-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translate(0);
+            }
+
+            100% {
+                transform: translateX(calc(-250px * 6));
+            }
+        }
+
+        .slide {
+            height: 200px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            perspective: 100px;
+
+        }
+
+        .slide img {
+            width: 100%;
+            transition: transform 1s;
+            border-radius: 10px;
+        }
+
+        .slider img:hover {
+            transform: translateZ(20px);
+            /* translatez vapar va mate slide ma perspectiv prpoertive vapar vi pade */
+        }
+
+        /* gradient shadows */
+
+        .slider::before,
+        .slider::after {
+            /* background: linear-gradient(to right, rgba(225, 225, 225, 1) 0%, rgb(225, 225, 225, 0) 100%); */
+            content: '';
+            height: 100%;
+            position: absolute;
+            width: 15%;
+            z-index: 2;
+        }
+
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+
+        .slider::after {
+            left: 0;
+            right: 0;
+            transform: rotateZ(180deg);
+        }
+
+        /* FOOTER STARTS */
+
+        .container5 {
+            height: 850px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Oswald", sans-serif;
+            /* ------------------ */
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 100vh;
+            background-color: black;
+            
+        }
+
+         /* body {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 100vh;
+            background-color: black;
+        } */
+
+        footer {
+            position: relative;
+            width: 100%;
+            background: #3586ff;
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .social_icon,
+        .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .social_icon li,
+        .menu li {
+            list-style: none;
+        }
+
+        .social_icon li a {
+            font-size: 2em;
+            color: white;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+        }
+
+        .social_icon li a:hover {
+            transform: translateY(-10px);
+            color: black;
+        }
+
+        footer .menu li a {
+            font-size: 1.2em;
+            color: white;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+            text-decoration: none;
+            opacity: 0.75;
+        }
+
+        footer .menu li a:hover {
+            opacity: 1;
+            color: black;
+        }
+
+        footer p {
+            color: white;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        footer .wave {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url(wave.png);
+            background-size: 1000px 100px;
+        }
+
+        footer .wave#wave1 {
+            z-index: 500;
+            opacity: 1;
+            bottom: 0;
+            animation: animateWave 4s linear infinite;
+        }
+
+        footer .wave#wave2 {
+            z-index: 499;
+            opacity: 0.5;
+            bottom: 10px;
+            animation: animateWave_02 4s linear infinite;
+        }
+
+        @keyframes animateWave {
+            0% {
+                background-position-x: 1000px;
+            }
+
+            100% {
+                background-position-x: 0px;
+            }
+        }
+
+        @keyframes animateWave_02 {
+            0% {
+                background-position-x: 0px;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+
+        footer .wave#wave3 {
+            z-index: 500;
+            opacity: 1;
+            bottom: 0;
+            animation: animateWave_03 4s linear infinite;
+        }
+
+        footer .wave#wave4 {
+            z-index: 499;
+            opacity: 0.7;
+            bottom: 10px;
+            animation: animateWave_04 4s linear infinite;
+        }
+
+        @keyframes animateWave_03 {
+            0% {
+                background-position-x: 1000px;
+            }
+
+            100% {
+                background-position-x: 0px;
+            }
+        }
+
+        @keyframes animateWave_04 {
+            0% {
+                background-position-x: 0px;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+
+        /* FOOTER ENDS */
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="Images/logo.png" alt="Logo" height="120px"></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Product</a>
+                        <div class="dropdown-content">
+                            <a href="retail.html">Retail</a>
+                            <a href="wholesale.html">Wholesale</a>
+                        </div>
+                    </li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="loginPage.html">Login</a></li>
+                </ul>
+            </nav>
+            <!-- <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="logo" height="120px">
+                </div>
+                <ul>
+                    <li>Home</li>
+                    <li>
+                        <a href="#">Products</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Retail</a></li>
+                            <li><a href="#">wholesale</a></li>
+                        </ul>
+                    </li>
+                    <li>Blogs</li>
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                </ul>
+            </nav> -->
+        </div>
+    </header>
+
+    <div class="container1">
+        <div class="img1">
+            <img src="Images/image1.png" alt="image" height="450px">
+        </div>
+    </div>
+
+    <main>
+        <div class="container2">
+            <div class="img3">
+                <img src="Images/image03.png" alt="img" width="600px">
+            </div>
+            <div class="img2">
+                <img src="Images/image2.png" alt="img" width="1200px">
+            </div>
+        </div>
+
+
+        <div class="container3">
+            <div class="img4">
+                <img src="Images/image04.png" alt="img" width="620px">
+
+                <div class="text">
+                    <p>Bring happiness to your palate.
+                        We at Apple Foods want to make you happy, through the food we help you prepare. Our quality
+                        and your preparation are the perfect recipe for deliciousness. Making your everyday meal
+                        taste better and enhancing the joy of eating has always been the endeavour at Apple Foods.
+                    </p>
+                </div>
+
+            </div>
+            <div class="extra-container">
+                <div class="img5">
+                    <img src="Images/wooden.jpg" alt="" height="700px" width="600px">
+                </div>
+            </div>
+            <div class="container4">
+                <h1 class="heading">Experience the taste of happiness with Apple Foods</h1>
+                <div class="detail">
+                    <p>Apple Foods has something for everyone’s happiness. Our products like Besan, Maida, Suji, and
+                        Rawa come
+                        in both larger institutional packs and smaller retail packs. While our Apple Chakki Fresh
+                        Atta has a
+                        smaller retail pack, our other wholesale institutional product packs are under the brand
+                        names Apple,
+                        Doller, Kakaji, Mango, Orange, Oscar and Favourite.</p>
+                </div>
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="Images/carousel1.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel2.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel3.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel4.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel5.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel6.jpg" alt="">
+                        </div>
+
+                        <!-- ----------------------------------------------->
+
+                        <div class="slide">
+                            <img src="Images/carousel1.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel2.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel3.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel4.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel5.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="Images/carousel6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- FOOTER STARTS -->
+    <div class="container5">
+        <footer>
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+
+            </div>
+            <ul class="social_icon">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            </ul>
+
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+            <p>@2024 Online Tutorials | All Right Reserved</p>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
+    <!-- FOOTER ENDS -->
+
+
+
+
+
+
+
+</body>
+
+</html>

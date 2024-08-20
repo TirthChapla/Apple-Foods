@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            background-color: #b085bb;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            display: flex;
+            background-color: #b085bb;
+            top: 0;
+            height: 80px;
+            width: 1303px;
+            z-index: 1000;
+
+        }
+
+        nav {
+            /* background-color: rgb(105 163 140); */
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            height: 70px;
+
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            position: relative;
+            left: 480px;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            margin: 20px;
+            font-size: 25px;
+
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav a:hover {
+            color: #000000;
+            text-decoration: underline;
+
+        }
+
+        .logo img {
+            height: 120px;
+            width: auto;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(0, 92, 57);
+            min-width: 120px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+
+        }
+
+        .dropdown-content a {
+            padding: 10px;
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            columns: red;
+            text-decoration: underline;
+        }
+
+        /* --------- main ----------- */
+       
+        .image {
+            position: relative;
+            left: 200px;
+            top: 102px;
+        }
+       
+        .container2 {
+            position: relative;
+            top: 120px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .address {
+            flex: 1;
+            margin: 0 10px;
+            border: 2px solid whitesmoke;
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+            
+        }
+
+        /* --------footer------ */
+        .container3 {
+            margin-top: 180px;
+            height: 550px;
+            background-color:#b085bb;
+        }
+
+        .container3 p {
+            font-size: larger;
+        }
+
+        .manage {
+            color: rgb(0, 0, 0);
+            margin: 4rem;
+        }
+
+        .img1 {
+            width: 15rem;
+            height: 8rem;
+            
+            object-fit:contain;
+        }
+
+        .per1 {
+            font-size: 1.2rem;
+
+            margin: 1.5rem;
+            display: flex;
+        }
+
+        .p1 {
+            margin: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="Images/logo.png" alt="Logo" height="120px"></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Product</a>
+                        <div class="dropdown-content">
+                            <a href="retail.html">Retail</a>
+                            <a href="wholesale.html">Wholesale</a>
+                        </div>
+                    </li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="loginPage.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container1">
+            <div class="image"> <img src="Images/map.webp" alt="" height="550px">
+            </div>
+
+        </div>
+        
+        <div class="container2">
+            <div class="address">
+                <h2>Rajkot</h2>
+                <p>
+                    Survey No. 183/P, <br>
+                    Opp. Kuvadava GIDC, <br>
+                    Rajkot-Ahmedabad Highway, <br>
+                    Kuvadava, <br>
+                    Dist: Rajkot – 360 023
+                </p>
+            </div>
+            <div class="address">
+                <h2>Chhatral</h2>
+                <p>
+                    Survey No. 3307, Chhatral-Mehsana <br> Highway,
+                    Rajpur, <br>
+                    Ta: Kadi, <br>
+                    Dist: Mehsana – 382 715
+                </p>
+            </div>
+            <div class="address">
+                <h2>Junagadh</h2>
+                <p>
+                    Opp. Reliance Petrol Pump, <br>
+                    Rajkot Road, <br>
+                    Dolatpara, <br>
+                    Junagadh – 362 001
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container3">
+        <div class="manage">
+            <h1>Management Team</h1>
+            <div>
+                <div class="per1">
+                    <img class="img1" src="images/tirth.jpeg" alt="">
+                    <div class="p1">
+                        <p>I am Tirth Chapla. Me and my friend Harsh created this website. I manage the sales of the product sales Online through our website. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="per1">
+                <img class="img1" src="images/harsh.jpeg" alt="">
+                <div class="p1">
+                    <p>I am Harsh Ajmeriya. My work is to manage the website.I was creating new features on our website and solve bugs if I get.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </footer>
+</body>
+
+</html>

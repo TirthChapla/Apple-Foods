@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow: hidden; /* prevent scrolling when popup is open */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .address-section,
+        .order-summary {
+            flex: 1;
+            margin-right: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .address-section h2,
+        .order-summary h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .add-new-address form input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .add-new-address form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .add-new-address form button:hover {
+            background-color: #555;
+        }
+
+        .next-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .next-button button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .next-button button:hover {
+            background-color: #555;
+        }
+
+        /* order summary */
+
+        .card {
+            width: 190px;
+            background: white;
+            padding: .4em;
+            border-radius: 6px;
+            position: relative; /* Added */
+        }
+
+        .card-image {
+            background-color: rgb(236, 236, 236);
+            width: 100%;
+            height: 200px;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .card-image img {
+            background-color: rgb(236, 236, 236);
+            width: 100%;
+            height: 200px;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .card-image:hover {
+            transform: scale(0.98);
+        }
+
+        .category {
+            text-transform: uppercase;
+            font-size: 0.7em;
+            font-weight: 600;
+            color: rgb(63, 121, 230);
+            padding: 10px 7px 0;
+        }
+
+        .category:hover {
+            cursor: pointer;
+        }
+
+        .heading {
+            font-weight: 600;
+            color: rgb(88, 87, 87);
+            padding: 7px;
+        }
+
+        .heading:hover {
+            cursor: pointer;
+        }
+
+        .author {
+            color: gray;
+            font-weight: 400;
+            font-size: 11px;
+            padding-top: 20px;
+        }
+
+        .name {
+            font-weight: 600;
+        }
+
+        .name:hover {
+            cursor: pointer;
+        }
+
+        /* Quantity selector */
+        .quantity-selector {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 0 0 6px 6px;
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity-selector button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .quantity-input {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            width: 30px;
+            text-align: center;
+        }
+
+        /* Popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 9999;
+            backdrop-filter: blur(5px); /* Blur background content */
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Buy Now</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="address-section">
+            <h2>Delivery Address</h2>
+
+            <div class="add-new-address">
+                <h3>Add New Address:</h3>
+                <form action="#" method="post" id="address-form">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="text" name="address" id="address" placeholder="Address" required>
+                    <input type="text" name="city" id="city" placeholder="City" required>
+                    <input type="text" name="pincode" id="pincode" placeholder="Pincode" required>
+                    <button type="submit">Add Address</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="card">
+                <div class="card-image"><img src="Images/Apple-Besan1.jpg" alt=""></div>
+                <div class="category"> Illustration </div>
+                <div class="heading"> Apple Besan
+                    <div class="author"> By <span class="name">Abi</span> 4 days ago</div>
+                </div>
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity()">-</button>
+                    <input type="text" class="quantity-input" id="quantity" value="1">
+                    <button onclick="incrementQuantity()">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="next-button" id="next-button">
+        <button onclick="validateAddress()">Next</button>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">X</span>
+            <p>Please fill in your name and address before proceeding!</p>
+        </div>
+    </div>
+
+    <script>
+        function validateAddress() {
+            var name = document.getElementById('name').value;
+            var address = document.getElementById('address').value;
+
+            if (name === "" || address === "") {
+                document.getElementById('popup').style.display = 'block';
+            } else {
+                // Proceed to the next page
+                window.location.href = "payment-page.html";
+            }
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function incrementQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var quantity = parseInt(quantityInput.value);
+            quantityInput.value = quantity + 1;
+        }
+
+        function decrementQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var quantity = parseInt(quantityInput.value);
+            if (quantity > 1) {
+                quantityInput.value = quantity - 1;
+            }
+        }
+    </script>
+</body>
+
+</html>
